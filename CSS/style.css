@@ -1,74 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Black+Ops+One&family=Days+One&family=Lato:wght@300&family=Roboto:wght@300&display=swap');
 
 /*DECLARE VARIABLES */
-:root{
-    --primary-color:#047aed;
-    --seconday-color:#1c3fa8;
-    --dark-color:#002240;
-    --light-color:#f4f4f4;
+:root {
+    --primary-color: #047aed;
+    --seconday-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
 }
 
 /* DECLARE THE UNIVERSAL SELECTOR */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Lato', sans-serif;
     color: #333;
     line-height: 1.6;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #333;
 }
 
 h1,
-h2{
+h2 {
     font-weight: 300;
     line-height: 1.2;
     margin: 10px 0;
 }
 
-p{
+p {
     margin: 10px 0;
 }
 
-img{
+img {
     width: 100%;
 }
 
 /* WE GIVE STYLE TO THE NAVIGATION BAR NAVBAR */
-.navbar{
+.navbar {
     background-color: var(--primary-color);
     color: #fff;
     height: 70px;
 
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
 
 }
 
-.navbar a{
+.navbar a {
     color: #fff;
     padding: 10px;
     margin: 0 5px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     border-bottom: 2px solid #fff;
 }
 
-.navbar .flex{
+.navbar .flex {
     justify-content: space-between;
 }
 
@@ -76,42 +76,45 @@ img{
 /*                                  SHOWCASE 
 /* ********************************************************************************** */
 
-.showcase{
+.showcase {
     height: 400px;
     background-color: var(--primary-color);
     color: #fff;
-    position: relative; /*in case we want to position elements inside*/
+    position: relative;
+    /*in case we want to position elements inside*/
 }
 
-.showcase h1{
+.showcase h1 {
     font-size: 40px;
 }
 
-.showcase p{
+.showcase p {
     margin: 20px 0;
 }
 
-.showcase .grid{
-    grid-template-columns: 55% 45%;   /*This rule overrides the .grid one below*/
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+    /*This rule overrides the .grid one below*/
     gap: 30px;
     overflow: visible;
 }
 
-.showcase-form{
-  position: relative;
-  top: 60px;  
-  height: 350px;
-  max-width: 400px;
-  z-index: 100; /*to make sure it is always in the front*/
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    max-width: 400px;
+    z-index: 100;
+    /*to make sure it is always in the front*/
 }
 
-.showcase-form .form-control{
+.showcase-form .form-control {
     margin: 30px 0;
 }
 
-.showcase-form input[type='text'], 
-.showcase-form input[type='email']{
-    border:0;
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
     border-bottom: 1px solid #b4becb;
     width: 100%;
     padding: 3px;
@@ -119,12 +122,12 @@ img{
 
 }
 
-.showcase-form input:focus{
+.showcase-form input:focus {
     outline: none;
 }
 
 .showcase::before,
-.showcase::after{
+.showcase::after {
     content: '';
     position: absolute;
     height: 50px;
@@ -140,20 +143,20 @@ img{
 /*                                    STATS
 /* ********************************************************************************** */
 
-.stats{
+.stats {
     padding-top: 100px;
 }
 
-.container .stats-heading{
+.container .stats-heading {
     max-width: 500px;
     margin: 0 auto;
 }
 
-.stats .grid h3{
+.stats .grid h3 {
     font-size: 35px;
 }
 
-.stats .grid p{
+.stats .grid p {
     font-size: 20px;
     font-weight: bold;
 }
@@ -163,24 +166,24 @@ img{
 /*                                    CLI
 /* ********************************************************************************** */
 
-.cli .grid{
+.cli .grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr) ;
+    grid-template-rows: repeat(2, 1fr);
 
 
 }
 
-.cli .grid >*:first-child{
+.cli .grid>*:first-child {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
 }
 
-.cli .grid >*:nth-child(2){
+/* .cli .grid>*:nth-child(2) {
     grid-column: 3;
     grid-row: 1;
-}
+} */
 
-.cli .card{
+.cli .card {
     text-align: center;
 }
 
@@ -189,6 +192,127 @@ img{
 /*                                    CLOUD
 /* ********************************************************************************** */
 
-.cloud .grid{
+.cloud .grid {
     grid-template-columns: 4fr, 3fr;
+}
+
+/* ********************************************************************************** */
+/*                                  LANGUAGES
+/* ********************************************************************************** */
+
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 20px;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+    transition: transform 0.2s ease;
+}
+
+/* ********************************************************************************** */
+/*                                  FOOTER
+/* ********************************************************************************** */
+
+.footer .container nav li {
+    text-align: center;
+}
+
+.footer .container .social {
+    text-align: right;
+}
+
+.footer .social a {
+    margin: 0 10px;
+}
+
+/* ********************************************************************************** */
+/*                                  MEDIA QUERIES
+/* ********************************************************************************** */
+
+/* TABLETS AND UNDER */
+@media(max-width: 768px) {
+.grid,
+.showcase .grid,
+.stats .grid,
+.cli .grid,
+.cloud .grid
+.footer .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.showcase{
+    height: auto;
+}
+
+.showcase-text{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.showcase-form{
+    justify-self: center;
+    margin: auto;
+    width: 100%;
+}
+
+.cli .grid>*:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+.cloud .grid{
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr;
+}
+
+.footer .grid-3{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.footer div{
+    text-align: center;
+}
+
+.footer nav{
+    text-align: center;
+}
+
+.footer .container .social{
+    text-align: center;
+}
+
+}
+
+/* MOBILE */
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .navbar ul{
+        background-color: rgba(0,0,0,0.05);
+    }
+    .navbar li{
+        padding: 10px;
+    }
+
+
 }

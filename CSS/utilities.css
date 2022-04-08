@@ -15,7 +15,7 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     color: #333;
 }
@@ -63,6 +63,18 @@
 .btn-light {
     background-color: var(--light-color);
     color: #333;
+}
+
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a,
+.bg-light a,
+.btn-light a{
+    color: #fff;
 }
 
 /*TEXT AND SIZES */
